@@ -64,13 +64,13 @@ function waterGarden(name) {
 
 function doSummerChores(name) {
     mowYard(name).then(value => {
-        console.log(value); return weedEat(name)}).catch((error) => console.error(error))
-    .then(value => {console.log(value); return trimHedges(name)}).catch((error) => console.error(error))
-    .then(value => {console.log(value); return collectWood(name)}).catch((error) => console.error(error))
-    .then(value => {console.log(value); return waterGarden(name)}).catch((error) => console.error(error))
-    .then(value => console.log(value)).catch((error) => console.error(error))
+        console.log(value); return weedEat(name)})
+    .then(value => {console.log(value); return trimHedges(name)})
+    .then(value => {console.log(value); return collectWood(name)})
+    .then(value => {console.log(value); return waterGarden(name)})
+    .then(value => console.log(value))
     .then(() => {
-        console.log(`${name} finished all their chores!`)});
+        console.log(`${name} finished all their chores!`)}).catch((error) => console.error(error));
 
 };
 
